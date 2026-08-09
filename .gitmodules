@@ -1,0 +1,3 @@
+[submodule "Plugins/RPGCore"]
+	path = Plugins/RPGCore
+	url = https://github.com/WitherLzero/UE5-RPG-Core.git
