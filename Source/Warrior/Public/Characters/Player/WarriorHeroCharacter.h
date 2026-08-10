@@ -4,9 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "Characters/WarriorBaseCharacter.h"
+#include "RPGFramework/Input/RPGInputConfig.h"
 #include "WarriorHeroCharacter.generated.h"
 
 struct FInputActionValue;
+
 UCLASS()
 class WARRIOR_API AWarriorHeroCharacter : public AWarriorBaseCharacter
 {
@@ -19,6 +21,13 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	virtual bool HandleNativeInput(FGameplayTag Tag, ERPGInputEvent EventType, FInputActionValue Value) override;
+	
+	virtual bool OnNativeInput_Implementation(FGameplayTag Tag, ERPGInputEvent EventType, FInputActionValue Value);
+	
+	virtual void Move(const FVector2D& InputAxis) override;
+	void Look(const FVector2D& InputAxis);
 	
 private:
 #pragma region Components
