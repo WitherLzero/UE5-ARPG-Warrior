@@ -6,6 +6,9 @@
 #include "RPGFramework/Character/RPGCharacterBase.h"
 #include "WarriorBaseCharacter.generated.h"
 
+class UCameraComponent;
+class USpringArmComponent;
+
 UCLASS()
 class WARRIOR_API AWarriorBaseCharacter : public ARPGCharacterBase
 {
@@ -14,6 +17,8 @@ class WARRIOR_API AWarriorBaseCharacter : public ARPGCharacterBase
 public:
 	// Sets default values for this character's properties
 	AWarriorBaseCharacter();
+	
+	
 
 
 };
